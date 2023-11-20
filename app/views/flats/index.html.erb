@@ -1,0 +1,14 @@
+<%# on recoit la variable dinstance @flats %>
+<h1>Flats</h1>
+<div class="d-flex flex-wrap">
+  <% @flats.each do |flat| %>
+    <div class="card m-2" style="width: 18rem;">
+      <%= image_tag flat["imageUrl"]%>
+      <div class="card-body">
+        <h5 class="card-title"><%= flat["name"] %></h5>
+        <p><%= flat["price"] %> <%= flat["priceCurrency"] %></p>
+      </div>
+    </div>
+  <% end %>
+<%# c'est un array, on itere et on affiche les hash "name" "imageUrl"  "price"%>
+</div>
